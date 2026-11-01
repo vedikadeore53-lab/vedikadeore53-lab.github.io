@@ -1,81 +1,102 @@
-<!-- LIVE RATING - START -->
-<div id="live-rating-box" style="background:rgba(20,20,35,0.9);border:1px solid #a78bfa;padding:30px;border-radius:20px;max-width:480px;margin:50px auto;text-align:center;font-family:'Space Grotesk', sans-serif;backdrop-filter:blur(10px);">
-  <h3 style="color:white;margin:0 0 10px 0;font-size:22px;">⭐ LIVE Ratings</h3>
-  <p style="color:#aaa;font-size:13px;margin-bottom:15px;">Saglyanchi rating ithe LIVE disel</p>
-  
-  <div id="stars" style="font-size:42px;cursor:pointer;margin:15px 0;letter-spacing:5px;">
-    <span onclick="setStar(1)" id="star1">☆</span><span onclick="setStar(2)" id="star2">☆</span><span onclick="setStar(3)" id="star3">☆</span><span onclick="setStar(4)" id="star4">☆</span><span onclick="setStar(5)" id="star5">☆</span>
-  </div>
-  
-  <p style="color:white;margin:10px 0;"><b id="avgNum" style="color:#a78bfa;font-size:24px;">0.0</b> <span style="color:#888;">avg from</span> <b id="totalNum" style="color:#f472b6;">0</b> <span style="color:#888;">people</span></p>
-  
-  <input id="userName" placeholder="Tuza nav lih (optional)" style="width:100%;padding:12px;margin-top:15px;border-radius:10px;background:#0a0a0f;border:1px solid #333;color:white;outline:none;box-sizing:border-box;">
-  
-  <button onclick="submitRating()" id="submitBtn" style="width:100%;background:linear-gradient(90deg,#a78bfa,#f472b6);border:none;padding:13px;border-radius:25px;color:white;font-weight:bold;margin-top:15px;cursor:pointer;font-size:15px;">Submit LIVE Rating 🚀</button>
-  
-  <p id="msg" style="color:#10b981;margin-top:12px;font-size:14px;min-height:20px;"></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vedika Deore | VJTI Electronics</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+body{background:#070710;color:#fff;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(7,7,16,0.9);backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid rgba(168,85,247,0.15)}
+.logo{font-weight:800;font-size:20px;background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero{padding:130px 6% 60px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px;align-items:center}
+.hero h1{font-size:46px;line-height:1.1;font-weight:800}.hero h1 span{background:linear-gradient(90deg,#a855f7,#ec4899,#fde047);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#9ca3af;margin-top:16px;line-height:1.7}
+.badge{display:inline-block;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);color:#d8b4fe;padding:6px 14px;border-radius:30px;font-size:12px}
+.section{padding:70px 6%}
+.card{background:rgba(255,255,255,0.05);border:1px solid rgba(168,85,247,0.15);border-radius:18px;padding:22px;transition:0.3s}
+.card:hover{transform:translateY(-4px);border-color:#a855f7}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:20px}
+h2.section-title{font-size:30px;margin-bottom:6px} .sub{color:#6b7280;font-size:14px;margin-bottom:10px}
+.live-box{background:linear-gradient(135deg,#1a1033,#2d1148);border:1.5px solid #a78bfa;border-radius:24px;padding:32px;max-width:480px;margin:30px auto;text-align:center;box-shadow:0 0 40px rgba(168,85,247,0.35)}
+.stars{font-size:48px;letter-spacing:8px;cursor:pointer;margin:14px 0}
+.stat{background:rgba(0,0,0,0.45);padding:14px;border-radius:14px;margin:16px 0}
+.input{width:100%;padding:12px 16px;border-radius:12px;background:#0f0f1a;border:1px solid #333;color:white;outline:none;margin-top:10px}
+.btn{width:100%;background:linear-gradient(90deg,#8b5cf6,#ec4899);border:none;padding:14px;border-radius:30px;color:white;font-weight:700;margin-top:16px;cursor:pointer;font-size:16px}
+.btn:hover{transform:scale(1.02)}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">VEDIKA.DEV</div><div style="font-size:12px;color:#9ca3af"><i class="fa-solid fa-circle" style="color:#22c55e;font-size:10px"></i> LIVE</div></nav>
+
+<section class="hero">
+<div>
+<div class="badge">VJTI - Electronics & Telecommunication</div>
+<h1>Hi, I'm <span>Vedika Deore</span><br>Electronics Enthusiast</h1>
+<p>Second Year EXTC student at VJTI Mumbai. Passionate about embedded systems, IoT, PCB design and building real-world tech solutions that make life easier.</p>
+<div style="margin-top:24px;display:flex;gap:12px"><a href="#projects" style="text-decoration:none;background:linear-gradient(90deg,#a855f7,#ec4899);color:white;padding:12px 26px;border-radius:30px;font-weight:600">View Projects</a><a href="#contact" style="text-decoration:none;background:rgba(255,255,255,0.08);border:1px solid #a855f7;color:white;padding:12px 26px;border-radius:30px">Contact Me</a></div>
 </div>
+<div style="text-align:center"><div style="width:260px;height:260px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#ec4899);display:flex;align-items:center;justify-content:center;font-size:90px;font-weight:800;margin:auto;box-shadow:0 0 60px rgba(168,85,247,0.6)">V</div></div>
+</section>
+
+<section class="section" style="background:rgba(255,255,255,0.02)">
+<h2 class="section-title">🛠️ Skills</h2><p class="sub">What I work with</p>
+<div class="grid3">
+<div class="card"><i class="fa-solid fa-microchip" style="color:#a855f7"></i><b> Embedded C / Arduino</b><p style="color:#9ca3af;font-size:13px;margin-top:6px">Microcontrollers, Sensors</p></div>
+<div class="card"><i class="fa-brands fa-python" style="color:#fde047"></i><b> Python / IoT</b><p style="color:#9ca3af;font-size:13px;margin-top:6px">Automation & Data</p></div>
+<div class="card"><i class="fa-solid fa-circuit-board" style="color:#ec4899"></i><b> PCB Design</b><p style="color:#9ca3af;font-size:13px;margin-top:6px">Fusion 360, EasyEDA</p></div>
+</div>
+</section>
+
+<section class="section" id="certificates">
+<h2 class="section-title">📜 Certificates</h2><p class="sub">Adhi sarkhech sagle</p>
+<div class="grid3">
+<div class="card"><h4>Python for Everybody</h4><p style="color:#9ca3af;font-size:13px;margin-top:6px">Coursera - University of Michigan<br>⭐ Certified</p></div>
+<div class="card"><h4>Arduino & IoT Mastery</h4><p style="color:#9ca3af;font-size:13px;margin-top:6px">NPTEL - Embedded Systems<br>⭐ Certified</p></div>
+<div class="card"><h4>PCB Design & Fabrication</h4><p style="color:#9ca3af;font-size:13px;margin-top:6px">Autodesk Fusion 360<br>⭐ Certified</p></div>
+<div class="card"><h4>Smart India Hackathon</h4><p style="color:#9ca3af;font-size:13px;margin-top:6px">Participation Certificate 2024</p></div>
+</div>
+</section>
+
+<section class="section" id="projects" style="background:rgba(255,255,255,0.02)">
+<h2 class="section-title">💻 Projects</h2><p class="sub">My builds</p>
+<div class="grid2">
+<div class="card"><h3>🏠 Smart Home Automation</h3><p style="color:#9ca3af;font-size:13px;margin-top:8px">ESP32 + Firebase + Google Assistant based home control. Mobile app controlled lights, fans.</p><p style="color:#a78bfa;font-size:12px;margin-top:10px">#IoT #ESP32 #Firebase</p></div>
+<div class="card"><h3>🤖 Line Follower Robot</h3><p style="color:#9ca3af;font-size:13px;margin-top:8px">Autonomous robot using IR sensors & Arduino Uno. PID algorithm for smooth tracking.</p><p style="color:#a78bfa;font-size:12px;margin-top:10px">#Arduino #Robotics #C++</p></div>
+<div class="card"><h3>💡 Automatic Street Light</h3><p style="color:#9ca3af;font-size:13px;margin-top:8px">LDR based energy saving street light system with automatic intensity control.</p><p style="color:#a78bfa;font-size:12px;margin-top:10px">#Electronics #PCB</p></div>
+</div>
+</section>
+
+<section class="section" id="love">
+<div class="live-box">
+<h2 style="font-size:26px">❤️ LOVE Rating - LIVE</h2>
+<p style="color:#c4b5fd;font-size:13px;margin-top:6px">Adhi sarkha fakt LIVE add kelay! Saglyana disel!</p>
+<div class="stars" id="stars"><span onclick="setStar(1)" id="s1">☆</span><span onclick="setStar(2)" id="s2">☆</span><span onclick="setStar(3)" id="s3">☆</span><span onclick="setStar(4)" id="s4">☆</span><span onclick="setStar(5)" id="s5">☆</span></div>
+<div class="stat"><span id="avg" style="color:#a78bfa;font-size:28px;font-weight:800">0.0</span> <span style="color:#777">/ 5 from</span> <span id="total" style="color:#f472b6;font-size:22px;font-weight:800">0</span> <span style="color:#777">people</span></div>
+<input id="name" class="input" placeholder="Tuza nav (optional)">
+<button class="btn" onclick="submitLove()" id="btn">Submit LOVE ❤️</button>
+<p id="msg" style="color:#34d399;margin-top:12px;height:22px;font-size:14px"></p>
+<p style="color:#6b7280;font-size:11px;margin-top:10px">Powered by LIVE kvdb.io - No login needed</p>
+</div>
+</section>
+
+<section class="section" id="contact" style="text-align:center">
+<h2 class="section-title">Let's Connect</h2>
+<p style="color:#9ca3af;margin-top:10px">VJTI Mumbai | EXTC Second Year</p>
+<p style="margin-top:16px;color:#a78bfa"><i class="fa-solid fa-envelope"></i> vedikadeore53@gmail.com</p>
+</section>
 
 <script>
-let selected = 0;
-// Ha tujha unique database aahe - tujhyach site sathi
-const API_URL = "https://api.npoint.io/7b2a9c4d8e1f3a6b5c9d"; 
-
-function setStar(n){
-  selected = n;
-  for(let i=1;i<=5;i++){
-    document.getElementById('star'+i).innerText = i<=n ? '★' : '☆';
-    document.getElementById('star'+i).style.color = i<=n ? '#fbbf24' : '#555';
-  }
-}
-
-async function loadRatings(){
-  try{
-    let res = await fetch(API_URL);
-    let data = await res.json();
-    let ratings = data.ratings || [];
-    let count = ratings.length;
-    let sum = ratings.reduce((a,b)=>a+b.value,0);
-    document.getElementById('totalNum').innerText = count;
-    document.getElementById('avgNum').innerText = count ? (sum/count).toFixed(1) : '0.0';
-  }catch(e){
-    console.log("First time - no data yet");
-    document.getElementById('totalNum').innerText = '0';
-    document.getElementById('avgNum').innerText = '0.0';
-  }
-}
-
-async function submitRating(){
-  if(!selected){ alert('Pehle stars select kar! ⭐'); return; }
-  let name = document.getElementById('userName').value || 'Anonymous';
-  document.getElementById('submitBtn').innerText = 'Saving...';
-  document.getElementById('submitBtn').disabled = true;
-
-  try{
-    let res = await fetch(API_URL);
-    let data = await res.json();
-    let ratings = data.ratings || [];
-    ratings.push({value:selected, name:name, time:Date.now()});
-    
-    await fetch(API_URL, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({ratings:ratings})
-    });
-    
-    document.getElementById('msg').innerText = 'Thanks '+name+'! LIVE save zala! 🎉';
-    loadRatings();
-    setStar(0);
-    document.getElementById('userName').value = '';
-  }catch(err){
-    // Jar API fail zala tar backup - npoint.io var jaaun navin bin banav lagel
-    document.getElementById('msg').innerText = 'Error - Thodya velane parat try kar';
-    console.log(err);
-  }
-  document.getElementById('submitBtn').innerText = 'Submit LIVE Rating 🚀';
-  document.getElementById('submitBtn').disabled = false;
-}
-
-loadRatings();
+let selected=0;
+const API="https://kvdb.io/VedikaDeore_LoveLIVE_FINAL_2026_V2/ratings";
+function setStar(n){selected=n;for(let i=1;i<=5;i++){let e=document.getElementById('s'+i);e.innerText=i<=n?'★':'☆';e.style.color=i<=n?'#f43f5e':'#3f3f46'}}
+async function load(){try{let r=await fetch(API);if(!r.ok)throw 0;let d=await r.json();let arr=Array.isArray(d)?d:[];let c=arr.length;let s=arr.reduce((a,b)=>a+(b.v||b),0);document.getElementById('total').innerText=c;document.getElementById('avg').innerText=c?(s/c).toFixed(1):'0.0'}catch{}}
+async function submitLove(){if(!selected){alert('Adhi star select kar ❤️');return}let nm=document.getElementById('name').value||'Anonymous';let b=document.getElementById('btn');b.innerText='Saving LIVE...';b.disabled=true;try{let r=await fetch(API);let arr=[];if(r.ok){let d=await r.json();arr=Array.isArray(d)?d:[]}arr.push({v:selected,name:nm,t:Date.now()});await fetch(API,{method:'POST',body:JSON.stringify(arr)});document.getElementById('msg').innerText='Thank you '+nm+'! LIVE save zala ❤️';setStar(0);selected=0;document.getElementById('name').value='';load()}catch(e){document.getElementById('msg').innerText='Error - internet check kar'}b.innerText='Submit LOVE ❤️';b.disabled=false}
+load();
 </script>
-<!-- LIVE RATING - END -->
+</body>
+</html>
