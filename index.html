@@ -9,7 +9,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#0a0a14;color:#fff;scroll-behavior:smooth}
-nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,20,0.8);backdrop-filter:blur(10px);z-index:10}
+nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,20,0.85);backdrop-filter:blur(10px);z-index:10}
 .logo{font-weight:700;font-size:22px}
 .logo span{color:#a855f7}
 .hero{padding:120px 5% 50px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px;align-items:center}
@@ -17,14 +17,19 @@ nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content
 .hero h1{font-size:42px;line-height:1.15;margin-top:15px}
 .hero h1 span{background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .btn{padding:11px 24px;border-radius:30px;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;text-decoration:none;display:inline-block;font-weight:500;margin-top:18px;border:none;cursor:pointer}
-.profile{background:#121222;border-radius:24px;padding:22px;text-align:center;border:1px solid rgba(255,255,255,0.08)}
+.profile{background:#121222;border-radius:24px;padding:22px;text-align:center;border:1px solid rgba(255,255,255,0.08);box-shadow:0 15px 40px rgba(0,0,0,0.5)}
 .profile_img{width:150px;height:160px;border-radius:50%;border:4px solid #a855f7;object-fit:cover;object-position:top}
-.section{padding:50px 5%}
-.title{text-align:center;font-size:32px;margin-bottom:25px}
+.section{padding:55px 5%}
+.title{text-align:center;font-size:32px;margin-bottom:30px}
 .title span{color:#a855f7}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.box{background:#121222;padding:20px;border-radius:16px;border:1px solid #222}
-.rating-section{background:linear-gradient(135deg,#121222,#1a1033);border:1px solid rgba(168,85,247,0.3);border-radius:20px;padding:25px;max-width:800px;margin:20px auto}
+.box{background:#121222;padding:20px;border-radius:16px;border:1px solid #222;transition:0.3s}
+.box:hover{border-color:#a855f7;transform:translateY(-4px)}
+.tag{background:#1e1e32;padding:5px 12px;border-radius:15px;font-size:13px;margin:3px;display:inline-block}
+.cert{display:flex;gap:12px;align-items:center}
+.cert i{font-size:28px;color:#a855f7}
+.project{background:linear-gradient(135deg,#121222,#1f0f20);border:1px solid rgba(99,165,250,0.25);border-radius:20px;padding:20px;max-width:1000px;margin:auto}
+.rating-section{background:linear-gradient(135deg,#121222,#1a1033);border:1px solid rgba(168,85,247,0.3);border-radius:20px;padding:25px;max-width:850px;margin:20px auto}
 .star-input{font-size:30px;cursor:pointer;color:#333}
 .star-input .active{color:#facc15}
 .input{width:100%;padding:12px;border-radius:10px;border:1px solid #333;background:#0a0a14;color:#fff;margin:8px 0}
@@ -32,6 +37,7 @@ nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content
 .avg{font-size:40px;font-weight:700;color:#facc15}
 .contact-btn{display:inline-block;padding:7px 14px;border-radius:20px;text-decoration:none;color:#fff;font-size:13px;margin:4px}
 .call{background:#25D366} .wa{background:#128C7E}
+@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}}
 </style>
 </head>
 <body>
@@ -41,7 +47,8 @@ nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content
 <div>
 <div class="badge">✨ Excellence</div>
 <h1>Hi, I'm <span>Vedika Deore</span><br>Electronics Enthusiast</h1>
-<a href="#rate" class="btn">⭐ Rate My Work</a>
+<p style="margin-top:12px;color:#aaa">Passionate about Electronics, Innovation & Learning | VJTI Mumbai</p>
+<a href="#contact" class="btn">Contact Me</a> <a href="#rate" class="btn" style="background:transparent;border:1px solid #a855f7;margin-left:8px">⭐ Rate Me</a>
 </div>
 <div class="profile">
 <img src="profile.jpg" alt="Vedika" class="profile_img">
@@ -55,12 +62,30 @@ nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content
 </div>
 </section>
 
-<section class="section" id="education">
+<section class="section">
 <h2 class="title">Education & <span>Skills</span></h2>
 <div class="grid">
-<div class="box"><h3>📚 VJTI Mumbai - Electronics</h3><p style="color:#aaa;font-size:14px;margin-top:6px">Top College in Maharashtra - Veermata Jijabai Technological Institute</p></div>
-<div class="box"><h3>🎓 Academic Excellence</h3><p style="color:#aaa;font-size:14px;margin-top:6px">10th: 93.40% With Distinction | 12th: 86.60% PCMB Group</p></div>
-<div class="box"><h3>💻 Skills</h3><p style="color:#aaa;font-size:14px;margin-top:6px">Electronics | Hardworking | Teamwork | Communication</p><p style="margin-top:8px">📞 <a href="tel:9322577727" style="color:#a855f7">9322577727</a></p></div>
+<div class="box"><h3>📚 VJTI Mumbai - Electronics</h3><p style="color:#aaa;margin-top:8px;font-size:14px">Veermata Jijabai Technological Institute - One of Maharashtra's top colleges</p></div>
+<div class="box"><h3>🎓 Academic Excellence</h3><p style="color:#aaa;margin-top:8px;font-size:14px">10th: 93.40% With Distinction | 12th: 86.60% PCMB Group (Physics, Chemistry, Maths, Biology)</p><div style="margin-top:12px;height:8px;background:#222;border-radius:10px;overflow:hidden"><div style="width:93%;height:100%;background:linear-gradient(90deg,#a855f7,#ec4899)"></div></div></div>
+<div class="box"><h3>💻 Skills</h3><p style="margin-top:10px"><span class="tag">Electronics</span><span class="tag">C Programming</span><span class="tag">Hardworking</span><span class="tag">Teamwork</span><span class="tag">Communication</span></p></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">Certificates & <span>Achievements</span></h2>
+<div class="grid">
+<div class="box cert"><i class="fas fa-award"></i><div><h4>Electronics Workshop Certificate</h4><p style="color:#aaa;font-size:13px">VJTI TechFest 2024</p></div></div>
+<div class="box cert"><i class="fas fa-certificate"></i><div><h4>Academic Excellence Award</h4><p style="color:#aaa;font-size:13px">10th - 93.40% Distinction</p></div></div>
+<div class="box cert"><i class="fas fa-medal"></i><div><h4>PCMB Topper</h4><p style="color:#aaa;font-size:13px">12th - 86.60%</p></div></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="title">My <span>Projects</span></h2>
+<div class="project">
+<h3>🔌 Electronics Projects</h3>
+<p style="color:#aaa;margin-top:8px">Working on innovative electronics and IoT based projects at VJTI. Passionate about circuit design and embedded systems.</p>
+<p style="margin-top:12px"><span class="tag">Arduino</span><span class="tag">Circuit Design</span><span class="tag">IoT</span></p>
 </div>
 </section>
 
@@ -70,12 +95,12 @@ nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content
 <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px">
 <div><div class="avg" id="avgNum">0.0</div><div id="avgStars"></div><div id="totalCount" style="color:#aaa">0 ratings</div></div>
 <div style="flex:1;min-width:280px">
-<p style="margin-bottom:10px">Tumcha Rating Dya:</p>
+<p>Tumcha Rating Dya:</p>
 <div id="starInput" class="star-input"><i class="far fa-star" data-v="1"></i><i class="far fa-star" data-v="2"></i><i class="far fa-star" data-v="3"></i><i class="far fa-star" data-v="4"></i><i class="far fa-star" data-v="5"></i></div>
 <input id="rName" class="input" placeholder="Tumcha Nav">
 <textarea id="rComment" class="input" placeholder="Abhipray liha..."></textarea>
 <button onclick="submitRating()" class="btn" style="width:100%">Submit Rating 🚀</button>
-<p id="msg" style="color:#4ade80;margin-top:8px;display:none">Dhanyawad! Tumchi rating public jhali! ✅</p>
+<p id="msg" style="color:#4ade80;margin-top:8px;display:none">Dhanyawad! Public jhali! ✅</p>
 </div>
 </div>
 <h3 style="margin-top:25px">Lokancha Abhipray 💬</h3>
@@ -83,38 +108,20 @@ nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content
 </div>
 </section>
 
+<section class="section" id="contact" style="text-align:center">
+<h2 class="title">Contact <span>Me</span></h2>
+<p>📞 <a href="tel:9322577727" style="color:#a855f7">9322577727</a> | 💬 <a href="https://wa.me/919322577727" style="color:#25D366">WhatsApp</a></p>
+<p style="color:#aaa;margin-top:8px">VJTI Mumbai - Electronics Department</p>
+</section>
+
 <script>
-let sel=0;
-const stars=document.querySelectorAll('#starInput i');
+let sel=0;const stars=document.querySelectorAll('#starInput i');
 stars.forEach(s=>{s.addEventListener('click',()=>{sel=parseInt(s.dataset.v);updateStars()})});
 function updateStars(){stars.forEach((st,i)=>{st.className=i<sel?'fas fa-star active':'far fa-star'})}
 function getData(){return JSON.parse(localStorage.getItem('vedika_ratings')||'[]')}
 function saveData(d){localStorage.setItem('vedika_ratings',JSON.stringify(d))}
-function submitRating(){
- if(sel==0){alert('⭐ Star nivda!');return}
- const name=document.getElementById('rName').value||'Anonymous';
- const comment=document.getElementById('rComment').value||'Great work!';
- const data=getData();
- data.unshift({name,comment,rating:sel,date:new Date().toLocaleDateString()});
- saveData(data);
- document.getElementById('msg').style.display='block';
- document.getElementById('rName').value='';document.getElementById('rComment').value='';sel=0;updateStars();
- render();
-}
-function render(){
- const data=getData();
- const avg=data.length? (data.reduce((a,b)=>a+b.rating,0)/data.length).toFixed(1):'0.0';
- document.getElementById('avgNum').innerText=avg;
- document.getElementById('totalCount').innerText=data.length+' ratings';
- let sHtml='';for(let i=0;i<5;i++){sHtml+= i<Math.round(avg)?'<i class="fas fa-star" style="color:#facc15"></i>':'<i class="far fa-star" style="color:#333"></i>'} 
- document.getElementById('avgStars').innerHTML=sHtml;
- document.getElementById('avgTop').innerHTML=sHtml+' '+avg;
- let list='';data.forEach(r=>{
-   let st='';for(let i=0;i<5;i++) st+= i<r.rating?'⭐':'☆';
-   list+=`<div class="review"><b>${r.name}</b> - ${st} <span style="color:#aaa;font-size:12px">${r.date}</span><p style="margin-top:6px;color:#ddd">${r.comment}</p></div>`
- });
- document.getElementById('reviewList').innerHTML=list||'<p style="color:#aaa">Ajun kuni rating kela nahi - pahila tumhi kara! 👇</p>';
-}
+function submitRating(){if(sel==0){alert('⭐ Star nivda!');return}const name=document.getElementById('rName').value||'Anonymous';const comment=document.getElementById('rComment').value||'Great work!';const data=getData();data.unshift({name,comment,rating:sel,date:new Date().toLocaleDateString()});saveData(data);document.getElementById('msg').style.display='block';document.getElementById('rName').value='';document.getElementById('rComment').value='';sel=0;updateStars();render();}
+function render(){const data=getData();const avg=data.length?(data.reduce((a,b)=>a+b.rating,0)/data.length).toFixed(1):'0.0';document.getElementById('avgNum').innerText=avg;document.getElementById('totalCount').innerText=data.length+' ratings';let sHtml='';for(let i=0;i<5;i++){sHtml+=i<Math.round(avg)?'<i class="fas fa-star" style="color:#facc15"></i>':'<i class="far fa-star" style="color:#333"></i>'}document.getElementById('avgStars').innerHTML=sHtml;document.getElementById('avgTop').innerHTML=sHtml+' '+avg;let list='';data.forEach(r=>{let st='';for(let i=0;i<5;i++)st+=i<r.rating?'⭐':'☆';list+=`<div class="review"><b>${r.name}</b> - ${st} <span style="color:#aaa;font-size:12px">${r.date}</span><p style="margin-top:6px;color:#ddd">${r.comment}</p></div>`});document.getElementById('reviewList').innerHTML=list||'<p style="color:#aaa">Ajun kuni rating kela nahi - pahila tumhi kara! 👇</p>';}
 render();
 </script>
 </body>
