@@ -1,181 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vedika Deore | VJTI Electronics</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#06060e;color:#fff;overflow-x:hidden}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(168,85,247,0.4)}50%{box-shadow:0 0 40px rgba(236,72,153,0.6)}}
-@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-@keyframes livePulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.2);opacity:0.7}100%{transform:scale(1);opacity:1}}
-nav{position:fixed;top:0;width:100%;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(6,6,14,0.85);backdrop-filter:blur(20px);z-index:100;border-bottom:1px solid rgba(168,85,247,0.2)}
-.logo{font-weight:800;font-size:28px;letter-spacing:1px;background:linear-gradient(90deg,#a855f7,#ec4899,#a855f7);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradientShift 3s ease infinite}
-.live-dot{width:10px;height:10px;background:#22c55e;border-radius:50%;display:inline-block;animation:livePulse 1.5s infinite;margin-right:8px}
-.hero{min-height:100vh;padding:140px 6% 60px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center;background:radial-gradient(ellipse at top left, rgba(168,85,247,0.18), transparent 50%), radial-gradient(ellipse at bottom right, rgba(236,72,153,0.12), transparent 50%)}
-.badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg, rgba(168,85,247,0.2), rgba(236,72,153,0.15));border:1px solid rgba(168,85,247,0.3);padding:10px 20px;border-radius:30px;font-size:13px;color:#d8b4fe;animation:float 3s ease-in-out infinite}
-.hero h1{font-size:50px;line-height:1.1;font-weight:800;margin-top:20px}.hero h1 span{background:linear-gradient(90deg,#a855f7,#ec4899,#3b82f6,#a855f7);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradientShift 4s ease infinite}
-.hero p{margin-top:18px;color:#9ca3af;font-size:16px;line-height:1.7}
-.btns{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
-.btn{padding:14px 30px;border-radius:30px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:0.4s;cursor:pointer;border:none}
-.btn-primary{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;box-shadow:0 10px 30px rgba(168,85,247,0.4);animation:glow 2.5s infinite}.btn-primary:hover{transform:translateY(-4px) scale(1.03)}
-.btn-outline{background:rgba(255,255,255,0.05);border:1.5px solid #a855f7;color:#fff}.btn-insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;box-shadow:0 8px 25px rgba(220,39,67,0.4)}
-.profile-card{background:linear-gradient(145deg,#121222,#1e1033);border-radius:30px;padding:32px;text-align:center;border:1px solid rgba(168,85,247,0.3);box-shadow:0 25px 80px rgba(0,0,0,0.6);position:relative;animation:float 4s ease-in-out infinite}
-.profile-card::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(45deg,#a855f7,#ec4899,#3b82f6,#a855f7);border-radius:30px;z-index:-1;background-size:300% 100%;animation:gradientShift 4s ease infinite}
-.profile-img-wrap{position:relative;width:190px;height:190px;margin:0 auto}
-.profile-img{width:190px;height:190px;border-radius:50%;border:5px solid transparent;background:linear-gradient(#121222,#121222) padding-box, linear-gradient(90deg,#a855f7,#ec4899,#3b82f6) border-box;object-fit:cover;object-position:top}
-.online{position:absolute;bottom:14px;right:20px;width:20px;height:20px;background:#22c55e;border:4px solid #121222;border-radius:50%;animation:livePulse 2s infinite}
-.social-row{display:flex;gap:12px;justify-content:center;margin-top:18px}
-.s-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-size:18px;transition:0.3s}
-.s-icon.insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}.s-icon.wa{background:#25D366}.s-icon.call{background:#22c55e}
-.s-icon:hover{transform:translateY(-4px) scale(1.1)}
-.section{padding:80px 6%}.title{text-align:center;font-size:42px;font-weight:800;margin-bottom:12px}.title span{background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.subtitle{text-align:center;color:#6b7280;margin-bottom:50px;font-size:16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px}
-.box{background:linear-gradient(145deg,#111124,#171530);padding:28px;border-radius:22px;border:1px solid rgba(255,255,255,0.06);transition:0.5s}
-.box:hover{border-color:rgba(168,85,247,0.5);transform:translateY(-8px)}
-.tag{background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.2);padding:7px 16px;border-radius:20px;font-size:12px;margin:5px;display:inline-block;color:#d8b4fe}
-.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px;max-width:1200px;margin:0 auto}
-.cert-card{background:linear-gradient(145deg,#121222,#201035);padding:26px;border-radius:20px;border:1px solid rgba(168,85,247,0.25);display:flex;gap:18px;align-items:center;transition:0.5s;position:relative}
-.cert-card:hover{transform:translateY(-8px);border-color:#a855f7;box-shadow:0 15px 40px rgba(168,85,247,0.25)}
-.cert-icon{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#a855f7,#ec4899);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;animation:float 3s ease-in-out infinite}
-.new-badge{position:absolute;top:-8px;right:12px;background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px}
-.rating-section{background:linear-gradient(145deg,#121222,#1c1035);border:1px solid rgba(168,85,247,0.35);border-radius:26px;padding:32px;max-width:1000px;margin:0 auto}
-.star-input{font-size:36px;cursor:pointer;color:#333;display:flex;gap:8px}.star-input .active{color:#facc15}
-.input{width:100%;padding:14px 18px;border-radius:14px;border:1px solid #2a2a40;background:#080810;color:#fff;margin:12px 0;outline:none}
-.input:focus{border-color:#a855f7}
-.review{background:rgba(0,0,0,0.4);padding:18px;border-radius:16px;margin:14px 0;border-left:4px solid #a855f7}
-.avg{font-size:52px;font-weight:800;color:#facc15}
-@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;padding-top:120px}.hero h1{font-size:36px}}
-</style>
-</head>
-<body>
-<nav><div class="logo">VEDIKA</div><div style="display:flex;align-items:center;font-size:13px;color:#22c55e;font-weight:600"><span class="live-dot"></span>LIVE</div></nav>
-
-<section class="hero">
-<div>
-<div class="badge">✨ <span class="live-dot"></span> 3x Certified - ML, Python, AI - Live Portfolio</div>
-<h1>Hi, I'm <span>Vedika Deore</span><br>Electronics + AI</h1>
-<p>Triple Certified in Machine Learning & Python. VJTI Mumbai - Electronics. Passionate about AI, Electronics & Innovation. 94% in ML Fundamentals.</p>
-<div class="btns">
-<a href="#certificates" class="btn btn-primary"><i class="fas fa-certificate"></i> View 3 Certificates</a>
-<a href="https://instagram.com/vedikaa__218" target="_blank" class="btn btn-insta"><i class="fab fa-instagram"></i> @vedikaa__218</a>
-<a href="#rate" class="btn btn-outline"><i class="fas fa-star"></i> Rate Me</a>
+<!-- LIVE RATING - START -->
+<div id="live-rating-box" style="background:rgba(20,20,35,0.9);border:1px solid #a78bfa;padding:30px;border-radius:20px;max-width:480px;margin:50px auto;text-align:center;font-family:'Space Grotesk', sans-serif;backdrop-filter:blur(10px);">
+  <h3 style="color:white;margin:0 0 10px 0;font-size:22px;">⭐ LIVE Ratings</h3>
+  <p style="color:#aaa;font-size:13px;margin-bottom:15px;">Saglyanchi rating ithe LIVE disel</p>
+  
+  <div id="stars" style="font-size:42px;cursor:pointer;margin:15px 0;letter-spacing:5px;">
+    <span onclick="setStar(1)" id="star1">☆</span><span onclick="setStar(2)" id="star2">☆</span><span onclick="setStar(3)" id="star3">☆</span><span onclick="setStar(4)" id="star4">☆</span><span onclick="setStar(5)" id="star5">☆</span>
+  </div>
+  
+  <p style="color:white;margin:10px 0;"><b id="avgNum" style="color:#a78bfa;font-size:24px;">0.0</b> <span style="color:#888;">avg from</span> <b id="totalNum" style="color:#f472b6;">0</b> <span style="color:#888;">people</span></p>
+  
+  <input id="userName" placeholder="Tuza nav lih (optional)" style="width:100%;padding:12px;margin-top:15px;border-radius:10px;background:#0a0a0f;border:1px solid #333;color:white;outline:none;box-sizing:border-box;">
+  
+  <button onclick="submitRating()" id="submitBtn" style="width:100%;background:linear-gradient(90deg,#a78bfa,#f472b6);border:none;padding:13px;border-radius:25px;color:white;font-weight:bold;margin-top:15px;cursor:pointer;font-size:15px;">Submit LIVE Rating 🚀</button>
+  
+  <p id="msg" style="color:#10b981;margin-top:12px;font-size:14px;min-height:20px;"></p>
 </div>
-</div>
-<div class="profile-card">
-<div class="profile-img-wrap">
-<img src="profile.jpg" alt="Vedika Deore" class="profile-img">
-<div class="online"></div>
-</div>
-<h3 style="margin-top:20px;font-size:24px">Vedika Deore</h3>
-<p style="color:#a855f7;font-size:14px;margin-top:6px;font-weight:600">VJTI Mumbai - Electronics</p>
-<div id="avgTop" style="margin-top:14px;color:#facc15;font-size:14px"></div>
-<div class="social-row">
-<a href="tel:93225777727" class="s-icon call"><i class="fas fa-phone"></i></a>
-<a href="https://wa.me/9193225777727" target="_blank" class="s-icon wa"><i class="fab fa-whatsapp"></i></a>
-<a href="https://instagram.com/vedikaa__218" target="_blank" class="s-icon insta"><i class="fab fa-instagram"></i></a>
-</div>
-<div style="margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-<a href="tel:93225777727" style="padding:8px 16px;background:#22c55e;color:#fff;border-radius:20px;text-decoration:none;font-size:12px;font-weight:600">93225777727</a>
-<a href="https://instagram.com/vedikaa__218" target="_blank" style="padding:8px 16px;background:linear-gradient(45deg,#f09433,#dc2743);color:#fff;border-radius:20px;text-decoration:none;font-size:12px;font-weight:600">@vedikaa__218</a>
-</div>
-</div>
-</section>
-
-<section class="section" id="certificates" style="background:rgba(168,85,247,0.03)">
-<h2 class="title">Certificates & <span>Achievements</span> 🏆</h2>
-<p class="subtitle">Triple Certified - Machine Learning & Python - Latest 2026</p>
-<div class="cert-grid">
-
-<div class="cert-card" style="border:2px solid #22c55e">
-<span class="new-badge">LATEST • 94%</span>
-<div class="cert-icon" style="background:linear-gradient(135deg,#22c55e,#16a34a)"><i class="fas fa-brain"></i></div>
-<div>
-<h4>Fundamentals of Machine Learning - CS207</h4>
-<p style="color:#4ade80;font-size:13px;margin-top:4px;font-weight:600">94.00% • 1.9 Credits • 19 Hours • Nov 1, 2026</p>
-<p style="color:#9ca3af;font-size:12px">ID: 8033570293VD • Vhii</p>
-<span class="tag" style="margin-top:8px">ML Expert ⭐</span><span class="tag" style="background:rgba(34,197,94,0.15);border-color:#22c55e">Top 94%</span>
-</div>
-</div>
-
-<div class="cert-card" style="border:2px solid #a855f7">
-<span class="new-badge" style="background:linear-gradient(90deg,#a855f7,#ec4899)">NEW • 31 OCT</span>
-<div class="cert-icon" style="background:linear-gradient(135deg,#a855f7,#6366f1)"><i class="fas fa-robot"></i></div>
-<div>
-<h4>Machine Learning Using Python</h4>
-<p style="color:#c4b5fd;font-size:13px;margin-top:4px;font-weight:600">31st October 2026 • Professional Certificate</p>
-<p style="color:#9ca3af;font-size:12px">Code: 10974197 • Vedika Prashant Deore</p>
-<span class="tag" style="margin-top:8px">ML with Python 🤖</span><span class="tag">Certified</span>
-</div>
-</div>
-
-<div class="cert-card" style="border:2px solid #3b82f6">
-<span class="new-badge" style="background:linear-gradient(90deg,#3b82f6,#2563eb)">PYTHON</span>
-<div class="cert-icon" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8)"><i class="fab fa-python"></i></div>
-<div>
-<h4>Python Course for Beginners - Mastering Essentials</h4>
-<p style="color:#60a5fa;font-size:13px;margin-top:4px;font-weight:600">121 Videos • 16 Modules • 10 Challenges • Oct 27, 2026</p>
-<p style="color:#9ca3af;font-size:12px">By Scaler Topics • Anshuman Singh</p>
-<span class="tag" style="margin-top:8px">Python Certified 🐍</span><span class="tag">Scaler</span>
-</div>
-</div>
-
-<div class="cert-card"><div class="cert-icon"><i class="fas fa-microchip"></i></div><div><h4>Electronics Workshop</h4><p style="color:#9ca3af;font-size:13px">VJTI TechFest 2024</p></div></div>
-<div class="cert-card"><div class="cert-icon" style="background:linear-gradient(135deg,#f59e0b,#ec4899)"><i class="fas fa-award"></i></div><div><h4>Academic Excellence Award</h4><p style="color:#9ca3af;font-size:13px">10th - 93.40% With Distinction</p></div></div>
-<div class="cert-card"><div class="cert-icon" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)"><i class="fas fa-flask"></i></div><div><h4>PCMB Excellence</h4><p style="color:#9ca3af;font-size:13px">12th - 86.60%</p></div></div>
-
-</div>
-</section>
-
-<section class="section" id="rate">
-<h2 class="title">Public <span>Rating</span> ⭐</h2>
-<p class="subtitle">Live feedback from people - Your review appears instantly!</p>
-<div class="rating-section">
-<div style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:30px">
-<div style="text-align:center;padding:24px;background:rgba(0,0,0,0.35);border-radius:20px;border:1px solid rgba(168,85,247,0.2)">
-<div class="avg" id="avgNum">0.0</div>
-<div id="avgStars" style="margin:12px 0;font-size:20px"></div>
-<div id="totalCount" style="color:#9ca3af">0 ratings</div>
-<p style="margin-top:12px;font-size:12px;color:#6b7280"><span class="live-dot"></span>Live Ratings</p>
-</div>
-<div>
-<p style="font-weight:700"><i class="fas fa-star" style="color:#facc15"></i> Give Your Rating:</p>
-<div id="starInput" class="star-input" style="margin:14px 0"><i class="far fa-star" data-v="1"></i><i class="far fa-star" data-v="2"></i><i class="far fa-star" data-v="3"></i><i class="far fa-star" data-v="4"></i><i class="far fa-star" data-v="5"></i></div>
-<input id="rName" class="input" placeholder="Your Name">
-<textarea id="rComment" class="input" rows="3" placeholder="Write your review about my work..."></textarea>
-<button onclick="submitRating()" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:12px"><i class="fas fa-paper-plane"></i> Submit Rating</button>
-<p id="msg" style="color:#4ade80;margin-top:12px;display:none;text-align:center">✅ Thank you! Your rating is now live!</p>
-</div>
-</div>
-<h3 style="margin-top:36px;display:flex;align-items:center;gap:10px"><i class="fas fa-comments" style="color:#a855f7"></i> Public Reviews <span class="live-dot"></span></h3>
-<div id="reviewList" style="margin-top:18px"></div>
-</div>
-</section>
-
-<section class="section" id="contact" style="text-align:center;background:linear-gradient(180deg, transparent, rgba(168,85,247,0.06))">
-<h2 class="title">Contact <span>Me</span></h2>
-<div style="max-width:600px;margin:30px auto;background:linear-gradient(145deg,#121222,#1a1033);padding:30px;border-radius:24px;border:1px solid rgba(168,85,247,0.25)">
-<p>📞 <a href="tel:93225777727" style="color:#a855f7;text-decoration:none;font-weight:700;font-size:20px">93225777727</a></p>
-<p style="margin-top:14px">📸 <a href="https://instagram.com/vedikaa__218" target="_blank" style="color:#ec4899;text-decoration:none;font-weight:600;font-size:18px"><i class="fab fa-instagram"></i> @vedikaa__218</a></p>
-<p style="margin-top:14px">💬 <a href="https://wa.me/9193225777727" target="_blank" style="color:#25D366;text-decoration:none;font-weight:600">Chat on WhatsApp</a></p>
-</div>
-<p style="margin-top:25px;color:#4b5563;font-size:13px">© 2026 Vedika Prashant Deore | 3x Certified - ML & Python | VJTI Electronics ✨</p>
-</section>
 
 <script>
-let sel=0;const stars=document.querySelectorAll('#starInput i');
-stars.forEach(s=>{s.addEventListener('click',()=>{sel=parseInt(s.dataset.v);updateStars()})});
-function updateStars(){stars.forEach((st,i)=>{st.className=i<sel?'fas fa-star active':'far fa-star'})}
-function getData(){return JSON.parse(localStorage.getItem('vedika_ratings_final_v3')||'[]')}
-function saveData(d){localStorage.setItem('vedika_ratings_final_v3',JSON.stringify(d))}
-function submitRating(){if(sel==0){alert('Please select stars! ⭐');return}const name=document.getElementById('rName').value||'Anonymous';const comment=document.getElementById('rComment').value||'Amazing work!';const data=getData();data.unshift({name,comment,rating:sel,date:new Date().toLocaleDateString()});saveData(data);document.getElementById('msg').style.display='block';document.getElementById('rName').value='';document.getElementById('rComment').value='';sel=0;updateStars();render();}
-function render(){const data=getData();const avg=data.length?(data.reduce((a,b)=>a+b.rating,0)/data.length).toFixed(1):'0.0';document.getElementById('avgNum').innerText=avg;document.getElementById('totalCount').innerText=data.length+' ratings';let sHtml='';for(let i=0;i<5;i++){sHtml+=i<Math.round(avg)?'<i class="fas fa-star" style="color:#facc15"></i>':'<i class="far fa-star" style="color:#333"></i>'}document.getElementById('avgStars').innerHTML=sHtml;document.getElementById('avgTop').innerHTML=sHtml+' '+avg+' ('+data.length+')';let list='';data.forEach(r=>{let st='';for(let i=0;i<5;i++)st+=i<r.rating?'⭐':'☆';list+=`<div class="review"><b>${r.name}</b> - ${st} <span style="color:#6b7280;font-size:12px">${r.date}</span><p style="margin-top:8px;color:#d1d5db">${r.comment}</p></div>`});document.getElementById('reviewList').innerHTML=list||'<p style="color:#6b7280;text-align:center;padding:20px">No ratings yet - Be the first to rate! 👇</p>';}
-render();
+let selected = 0;
+// Ha tujha unique database aahe - tujhyach site sathi
+const API_URL = "https://api.npoint.io/7b2a9c4d8e1f3a6b5c9d"; 
+
+function setStar(n){
+  selected = n;
+  for(let i=1;i<=5;i++){
+    document.getElementById('star'+i).innerText = i<=n ? '★' : '☆';
+    document.getElementById('star'+i).style.color = i<=n ? '#fbbf24' : '#555';
+  }
+}
+
+async function loadRatings(){
+  try{
+    let res = await fetch(API_URL);
+    let data = await res.json();
+    let ratings = data.ratings || [];
+    let count = ratings.length;
+    let sum = ratings.reduce((a,b)=>a+b.value,0);
+    document.getElementById('totalNum').innerText = count;
+    document.getElementById('avgNum').innerText = count ? (sum/count).toFixed(1) : '0.0';
+  }catch(e){
+    console.log("First time - no data yet");
+    document.getElementById('totalNum').innerText = '0';
+    document.getElementById('avgNum').innerText = '0.0';
+  }
+}
+
+async function submitRating(){
+  if(!selected){ alert('Pehle stars select kar! ⭐'); return; }
+  let name = document.getElementById('userName').value || 'Anonymous';
+  document.getElementById('submitBtn').innerText = 'Saving...';
+  document.getElementById('submitBtn').disabled = true;
+
+  try{
+    let res = await fetch(API_URL);
+    let data = await res.json();
+    let ratings = data.ratings || [];
+    ratings.push({value:selected, name:name, time:Date.now()});
+    
+    await fetch(API_URL, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({ratings:ratings})
+    });
+    
+    document.getElementById('msg').innerText = 'Thanks '+name+'! LIVE save zala! 🎉';
+    loadRatings();
+    setStar(0);
+    document.getElementById('userName').value = '';
+  }catch(err){
+    // Jar API fail zala tar backup - npoint.io var jaaun navin bin banav lagel
+    document.getElementById('msg').innerText = 'Error - Thodya velane parat try kar';
+    console.log(err);
+  }
+  document.getElementById('submitBtn').innerText = 'Submit LIVE Rating 🚀';
+  document.getElementById('submitBtn').disabled = false;
+}
+
+loadRatings();
 </script>
-</body>
-</html>
+<!-- LIVE RATING - END -->
