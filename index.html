@@ -3,126 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vedika Prashant Deore | VJTI Electronics</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Vedika Deore | VJTI Electronics</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#0a0a14;color:#fff;scroll-behavior:smooth}
-nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,20,0.85);backdrop-filter:blur(10px);z-index:10}
-.logo{font-weight:700;font-size:22px}
-.logo span{color:#a855f7}
-.hero{padding:120px 5% 50px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px;align-items:center}
-.badge{display:inline-block;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);padding:6px 14px;border-radius:20px;font-size:12px;color:#a855f7}
-.hero h1{font-size:42px;line-height:1.15;margin-top:15px}
-.hero h1 span{background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.btn{padding:11px 24px;border-radius:30px;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;text-decoration:none;display:inline-block;font-weight:500;margin-top:18px;border:none;cursor:pointer}
-.profile{background:#121222;border-radius:24px;padding:22px;text-align:center;border:1px solid rgba(255,255,255,0.08);box-shadow:0 15px 40px rgba(0,0,0,0.5)}
-.profile_img{width:150px;height:160px;border-radius:50%;border:4px solid #a855f7;object-fit:cover;object-position:top}
-.section{padding:55px 5%}
-.title{text-align:center;font-size:32px;margin-bottom:30px}
-.title span{color:#a855f7}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.box{background:#121222;padding:20px;border-radius:16px;border:1px solid #222;transition:0.3s}
-.box:hover{border-color:#a855f7;transform:translateY(-4px)}
-.tag{background:#1e1e32;padding:5px 12px;border-radius:15px;font-size:13px;margin:3px;display:inline-block}
-.cert{display:flex;gap:12px;align-items:center}
-.cert i{font-size:28px;color:#a855f7}
-.project{background:linear-gradient(135deg,#121222,#1f0f20);border:1px solid rgba(99,165,250,0.25);border-radius:20px;padding:20px;max-width:1000px;margin:auto}
-.rating-section{background:linear-gradient(135deg,#121222,#1a1033);border:1px solid rgba(168,85,247,0.3);border-radius:20px;padding:25px;max-width:850px;margin:20px auto}
-.star-input{font-size:30px;cursor:pointer;color:#333}
-.star-input .active{color:#facc15}
-.input{width:100%;padding:12px;border-radius:10px;border:1px solid #333;background:#0a0a14;color:#fff;margin:8px 0}
-.review{background:#0a0a14;padding:15px;border-radius:12px;margin:10px 0;border-left:3px solid #a855f7}
-.avg{font-size:40px;font-weight:700;color:#facc15}
-.contact-btn{display:inline-block;padding:7px 14px;border-radius:20px;text-decoration:none;color:#fff;font-size:13px;margin:4px}
-.call{background:#25D366} .wa{background:#128C7E}
-@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}}
+body{background:#06060e;color:#fff;overflow-x:hidden}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(168,85,247,0.4)}50%{box-shadow:0 0 40px rgba(236,72,153,0.6)}}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes livePulse{0%{transform:scale(1);opacity:1}50%{transform:scale(1.2);opacity:0.7}100%{transform:scale(1);opacity:1}}
+nav{position:fixed;top:0;width:100%;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(6,6,14,0.85);backdrop-filter:blur(20px);z-index:100;border-bottom:1px solid rgba(168,85,247,0.2)}
+.logo{font-weight:800;font-size:28px;letter-spacing:1px;background:linear-gradient(90deg,#a855f7,#ec4899,#a855f7);background-size:200% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradientShift 3s ease infinite}
+.live-dot{width:10px;height:10px;background:#22c55e;border-radius:50%;display:inline-block;animation:livePulse 1.5s infinite;margin-right:8px}
+.hero{min-height:100vh;padding:140px 6% 60px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;align-items:center;background:radial-gradient(ellipse at top left, rgba(168,85,247,0.18), transparent 50%), radial-gradient(ellipse at bottom right, rgba(236,72,153,0.12), transparent 50%), radial-gradient(ellipse at center, rgba(59,130,246,0.08), transparent 70%)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg, rgba(168,85,247,0.2), rgba(236,72,153,0.15));border:1px solid rgba(168,85,247,0.3);padding:10px 20px;border-radius:30px;font-size:13px;color:#d8b4fe;animation:float 3s ease-in-out infinite}
+.hero h1{font-size:54px;line-height:1.1;font-weight:800;margin-top:20px}.hero h1 span{background:linear-gradient(90deg,#a855f7,#ec4899,#3b82f6,#a855f7);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gradientShift 4s ease infinite}
+.hero p{margin-top:18px;color:#9ca3af;font-size:16px;line-height:1.7}
+.btns{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:14px 30px;border-radius:30px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:0.4s;cursor:pointer;border:none;position:relative;overflow:hidden}
+.btn-primary{background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;box-shadow:0 10px 30px rgba(168,85,247,0.4);animation:glow 2.5s infinite}.btn-primary:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 15px 40px rgba(168,85,247,0.6)}
+.btn-outline{background:rgba(255,255,255,0.05);border:1.5px solid #a855f7;color:#fff;backdrop-filter:blur(10px)}.btn-outline:hover{background:rgba(168,85,247,0.15);transform:translateY(-3px)}
+.btn-insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;box-shadow:0 8px 25px rgba(220,39,67,0.4)}.btn-insta:hover{transform:translateY(-4px) scale(1.03)}
+.profile-card{background:linear-gradient(145deg,#121222,#1e1033);border-radius:30px;padding:32px;text-align:center;border:1px solid rgba(168,85,247,0.3);box-shadow:0 25px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05) inset;position:relative;animation:float 4s ease-in-out infinite}
+.profile-card::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(45deg,#a855f7,#ec4899,#3b82f6,#a855f7);border-radius:30px;z-index:-1;background-size:300% 100%;animation:gradientShift 4s ease infinite}
+.profile-img-wrap{position:relative;width:190px;height:190px;margin:0 auto}
+.profile-img{width:190px;height:190px;border-radius:50%;border:5px solid transparent;background:linear-gradient(#121222,#121222) padding-box, linear-gradient(90deg,#a855f7,#ec4899,#3b82f6) border-box;object-fit:cover;object-position:top;box-shadow:0 15px 40px rgba(168,85,247,0.4)}
+.online{position:absolute;bottom:14px;right:20px;width:20px;height:20px;background:#22c55e;border:4px solid #121222;border-radius:50%;animation:livePulse 2s infinite}
+.social-row{display:flex;gap:12px;justify-content:center;margin-top:18px}
+.s-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-size:18px;transition:0.3s}
+.s-icon.insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}.s-icon.wa{background:#25D366}.s-icon.call{background:#22c55e}
+.s-icon:hover{transform:translateY(-4px) scale(1.1)}
+.section{padding:80px 6%}.title{text-align:center;font-size:42px;font-weight:800;margin-bottom:12px}.title span{background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{text-align:center;color:#6b7280;margin-bottom:50px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px}
+.box{background:linear-gradient(145deg,#111124,#171530);padding:28px;border-radius:22px;border:1px solid rgba(255,255,255,0.06);transition:0.5s;position:relative;overflow:hidden}
+.box::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);transition:0.6s}
+.box:hover::before{left:100%}
+.box:hover{border-color:rgba(168,85,247,0.5);transform:translateY(-8px) scale(1.02);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+.tag{background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.2);padding:7px 16px;border-radius:20px;font-size:12px;margin:5px;display:inline-block;color:#d8b4fe;transition:0.3s}.tag:hover{background:rgba(168,85,247,0.25)}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;max-width:1150px;margin:0 auto}
+.cert-card{background:linear-gradient(145deg,#121222,#201035);padding:26px;border-radius:20px;border:1px solid rgba(168,85,247,0.25);display:flex;gap:18px;align-items:center;transition:0.5s;position:relative;overflow:hidden}
+.cert-card:hover{transform:translateY(-8px);border-color:#a855f7;box-shadow:0 15px 40px rgba(168,85,247,0.25)}
+.cert-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#a855f7,#ec4899);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;animation:float 3s ease-in-out infinite}
+.rating-section{background:linear-gradient(145deg,#121222,#1c1035);border:1px solid rgba(168,85,247,0.35);border-radius:26px;padding:32px;max-width:1000px;margin:0 auto;box-shadow:0 25px 70px rgba(0,0,0,0.5);position:relative;overflow:hidden}
+.rating-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, #a855f7, transparent)}
+.star-input{font-size:36px;cursor:pointer;color:#333;display:flex;gap:8px}
+.star-input .active{color:#facc15;transform:scale(1.15)}
+.input{width:100%;padding:14px 18px;border-radius:14px;border:1px solid #2a2a40;background:#080810;color:#fff;margin:12px 0;outline:none;transition:0.3s;font-size:14px}
+.input:focus{border-color:#a855f7;box-shadow:0 0 0 4px rgba(168,85,247,0.15)}
+.review{background:rgba(0,0,0,0.4);padding:18px;border-radius:16px;margin:14px 0;border-left:4px solid #a855f7;backdrop-filter:blur(10px)}
+.avg{font-size:52px;font-weight:800;color:#facc15;background:linear-gradient(90deg,#facc15,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;padding-top:120px}.hero h1{font-size:38px}}
 </style>
 </head>
 <body>
-<nav><div class="logo">VEDIKA <span>DEV</span></div></nav>
+<nav><div class="logo">VEDIKA</div><div style="display:flex;align-items:center;font-size:13px;color:#22c55e;font-weight:600"><span class="live-dot"></span>LIVE</div></nav>
 
 <section class="hero">
 <div>
-<div class="badge">✨ Excellence</div>
+<div class="badge">✨ <span class="live-dot"></span> Academic Excellence - 93.40% - Live Portfolio</div>
 <h1>Hi, I'm <span>Vedika Deore</span><br>Electronics Enthusiast</h1>
-<p style="margin-top:12px;color:#aaa">Passionate about Electronics, Innovation & Learning | VJTI Mumbai</p>
-<a href="#contact" class="btn">Contact Me</a> <a href="#rate" class="btn" style="background:transparent;border:1px solid #a855f7;margin-left:8px">⭐ Rate Me</a>
+<p>Passionate about Electronics, Innovation & Learning. Currently pursuing Electronics at VJTI Mumbai - One of Maharashtra's top engineering colleges. Building the future with circuits, IoT and creative tech solutions.</p>
+<div class="btns">
+<a href="#contact" class="btn btn-primary"><i class="fas fa-bolt"></i> Contact Me</a>
+<a href="https://instagram.com/vedikaa__218" target="_blank" class="btn btn-insta"><i class="fab fa-instagram"></i> Follow Me</a>
+<a href="#rate" class="btn btn-outline"><i class="fas fa-star"></i> Rate Me</a>
 </div>
-<div class="profile">
-<img src="profile.jpg" alt="Vedika" class="profile_img">
-<h3 style="margin-top:12px">Vedika Deore</h3>
-<p style="color:#a855f7;font-size:13px">VJTI Mumbai - Electronics</p>
-<div id="avgTop" style="color:#facc15;margin-top:8px"></div>
-<p style="margin-top:12px">
-<a href="tel:9322577727" class="contact-btn call">📞 9322577727</a>
-<a href="https://wa.me/919322577727" target="_blank" class="contact-btn wa">💬 WhatsApp</a>
-</p>
+<div style="margin-top:36px;display:flex;gap:24px;flex-wrap:wrap">
+<div style="text-align:center"><b style="font-size:24px;color:#a855f7;display:block">93.40%</b><span style="font-size:12px;color:#6b7280">10th Score</span></div>
+<div style="text-align:center"><b style="font-size:24px;color:#ec4899;display:block">86.60%</b><span style="font-size:12px;color:#6b7280">12th PCMB</span></div>
+<div style="text-align:center"><b style="font-size:24px;color:#3b82f6;display:block">VJTI</b><span style="font-size:12px;color:#6b7280">Mumbai</span></div>
+<div style="text-align:center"><b style="font-size:24px;color:#f59e0b;display:block">Live</b><span style="font-size:12px;color:#6b7280">Portfolio</span></div>
+</div>
+</div>
+<div class="profile-card">
+<div class="profile-img-wrap">
+<img src="profile.jpg" alt="Vedika Deore" class="profile-img">
+<div class="online"></div>
+</div>
+<h3 style="margin-top:20px;font-size:24px">Vedika Deore</h3>
+<p style="color:#a855f7;font-size:14px;margin-top:6px;font-weight:600">VJTI Mumbai - Electronics</p>
+<div id="avgTop" style="margin-top:14px;color:#facc15;font-size:14px"></div>
+<div class="social-row">
+<a href="tel:93225777727" class="s-icon call" title="Call"><i class="fas fa-phone"></i></a>
+<a href="https://wa.me/9193225777727" target="_blank" class="s-icon wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://instagram.com/vedikaa__218" target="_blank" class="s-icon insta" title="Instagram @vedikaa__218"><i class="fab fa-instagram"></i></a>
+</div>
+<div style="margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+<a href="tel:93225777727" style="padding:8px 16px;background:#22c55e;color:#fff;border-radius:20px;text-decoration:none;font-size:12px;font-weight:600"><i class="fas fa-phone"></i> 93225777727</a>
+<a href="https://instagram.com/vedikaa__218" target="_blank" style="padding:8px 16px;background:linear-gradient(45deg,#f09433,#dc2743);color:#fff;border-radius:20px;text-decoration:none;font-size:12px;font-weight:600"><i class="fab fa-instagram"></i> @vedikaa__218</a>
+</div>
+<p style="margin-top:14px;font-size:11px;color:#6b7280"><i class="fas fa-circle" style="color:#22c55e;font-size:8px;animation:livePulse 1.5s infinite"></i> Available for Projects</p>
 </div>
 </section>
 
 <section class="section">
 <h2 class="title">Education & <span>Skills</span></h2>
+<p class="subtitle">My academic journey and technical expertise</p>
 <div class="grid">
-<div class="box"><h3>📚 VJTI Mumbai - Electronics</h3><p style="color:#aaa;margin-top:8px;font-size:14px">Veermata Jijabai Technological Institute - One of Maharashtra's top colleges</p></div>
-<div class="box"><h3>🎓 Academic Excellence</h3><p style="color:#aaa;margin-top:8px;font-size:14px">10th: 93.40% With Distinction | 12th: 86.60% PCMB Group (Physics, Chemistry, Maths, Biology)</p><div style="margin-top:12px;height:8px;background:#222;border-radius:10px;overflow:hidden"><div style="width:93%;height:100%;background:linear-gradient(90deg,#a855f7,#ec4899)"></div></div></div>
-<div class="box"><h3>💻 Skills</h3><p style="margin-top:10px"><span class="tag">Electronics</span><span class="tag">C Programming</span><span class="tag">Hardworking</span><span class="tag">Teamwork</span><span class="tag">Communication</span></p></div>
+<div class="box"><h3>📚 VJTI Mumbai - Electronics</h3><p style="color:#9ca3af;margin-top:10px;line-height:1.6">Veermata Jijabai Technological Institute - One of Maharashtra's most prestigious engineering colleges. Specializing in Electronics with innovation and practical learning.</p><div style="margin-top:16px"><span class="tag">Electronics Dept</span><span class="tag">VJTI</span><span class="tag">Live Student</span></div></div>
+<div class="box"><h3>🎓 Academic Excellence</h3><p style="color:#9ca3af;margin-top:10px"><b style="color:#fff">10th: 93.40%</b> With Distinction | <b style="color:#fff">12th: 86.60%</b> PCMB Group (Physics, Chemistry, Maths, Biology)</p><div style="margin-top:14px;background:#1e1e32;height:10px;border-radius:10px;overflow:hidden"><div style="width:93%;height:100%;background:linear-gradient(90deg,#a855f7,#ec4899);border-radius:10px;animation:glow 2s infinite"></div></div></div>
+<div class="box"><h3>💻 Technical Skills</h3><div style="margin-top:16px"><span class="tag">Electronics</span><span class="tag">C Programming</span><span class="tag">Circuit Design</span><span class="tag">Arduino</span><span class="tag">IoT</span><span class="tag">Hardworking</span><span class="tag">Teamwork</span></div></div>
 </div>
 </section>
 
-<section class="section">
+<section class="section" style="background:rgba(168,85,247,0.03)">
 <h2 class="title">Certificates & <span>Achievements</span></h2>
-<div class="grid">
-<div class="box cert"><i class="fas fa-award"></i><div><h4>Electronics Workshop Certificate</h4><p style="color:#aaa;font-size:13px">VJTI TechFest 2024</p></div></div>
-<div class="box cert"><i class="fas fa-certificate"></i><div><h4>Academic Excellence Award</h4><p style="color:#aaa;font-size:13px">10th - 93.40% Distinction</p></div></div>
-<div class="box cert"><i class="fas fa-medal"></i><div><h4>PCMB Topper</h4><p style="color:#aaa;font-size:13px">12th - 86.60%</p></div></div>
-</div>
-</section>
-
-<section class="section">
-<h2 class="title">My <span>Projects</span></h2>
-<div class="project">
-<h3>🔌 Electronics Projects</h3>
-<p style="color:#aaa;margin-top:8px">Working on innovative electronics and IoT based projects at VJTI. Passionate about circuit design and embedded systems.</p>
-<p style="margin-top:12px"><span class="tag">Arduino</span><span class="tag">Circuit Design</span><span class="tag">IoT</span></p>
+<p class="subtitle">Recognitions that mark my learning journey</p>
+<div class="cert-grid">
+<div class="cert-card"><div class="cert-icon"><i class="fas fa-microchip"></i></div><div><h4>Electronics Workshop</h4><p style="color:#9ca3af;font-size:13px;margin-top:4px">VJTI TechFest 2024 - Hands on circuit design and IoT</p><span class="tag" style="margin-top:8px">Certified ✓</span></div></div>
+<div class="cert-card"><div class="cert-icon" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)"><i class="fas fa-award"></i></div><div><h4>Academic Excellence Award</h4><p style="color:#9ca3af;font-size:13px;margin-top:4px">10th Standard - 93.40% With Distinction</p><span class="tag" style="margin-top:8px">Topper 🏆</span></div></div>
+<div class="cert-card"><div class="cert-icon" style="background:linear-gradient(135deg,#ec4899,#f59e0b)"><i class="fas fa-flask"></i></div><div><h4>PCMB Excellence</h4><p style="color:#9ca3af;font-size:13px;margin-top:4px">12th Science - 86.60% Physics, Chemistry, Maths, Biology</p><span class="tag" style="margin-top:8px">Science Star ⭐</span></div></div>
 </div>
 </section>
 
 <section class="section" id="rate">
 <h2 class="title">Public <span>Rating</span> ⭐</h2>
+<p class="subtitle">Live feedback from people - Your review appears instantly!</p>
 <div class="rating-section">
-<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px">
-<div><div class="avg" id="avgNum">0.0</div><div id="avgStars"></div><div id="totalCount" style="color:#aaa">0 ratings</div></div>
-<div style="flex:1;min-width:280px">
-<p>Tumcha Rating Dya:</p>
-<div id="starInput" class="star-input"><i class="far fa-star" data-v="1"></i><i class="far fa-star" data-v="2"></i><i class="far fa-star" data-v="3"></i><i class="far fa-star" data-v="4"></i><i class="far fa-star" data-v="5"></i></div>
-<input id="rName" class="input" placeholder="Tumcha Nav">
-<textarea id="rComment" class="input" placeholder="Abhipray liha..."></textarea>
-<button onclick="submitRating()" class="btn" style="width:100%">Submit Rating 🚀</button>
-<p id="msg" style="color:#4ade80;margin-top:8px;display:none">Dhanyawad! Public jhali! ✅</p>
+<div style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:30px">
+<div style="text-align:center;padding:24px;background:rgba(0,0,0,0.35);border-radius:20px;border:1px solid rgba(168,85,247,0.2)">
+<div class="avg" id="avgNum">0.0</div>
+<div id="avgStars" style="margin:12px 0;font-size:20px"></div>
+<div id="totalCount" style="color:#9ca3af">0 ratings</div>
+<p style="margin-top:12px;font-size:12px;color:#6b7280"><span class="live-dot"></span>Live Ratings</p>
+</div>
+<div>
+<p style="font-weight:700;font-size:16px"><i class="fas fa-star" style="color:#facc15"></i> Give Your Rating:</p>
+<div id="starInput" class="star-input" style="margin:14px 0"><i class="far fa-star" data-v="1"></i><i class="far fa-star" data-v="2"></i><i class="far fa-star" data-v="3"></i><i class="far fa-star" data-v="4"></i><i class="far fa-star" data-v="5"></i></div>
+<input id="rName" class="input" placeholder="Your Name">
+<textarea id="rComment" class="input" rows="3" placeholder="Write your review about my work..."></textarea>
+<button onclick="submitRating()" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:12px"><i class="fas fa-paper-plane"></i> Submit Rating</button>
+<p id="msg" style="color:#4ade80;margin-top:12px;display:none;text-align:center;font-weight:600">✅ Thank you! Your rating is now live and public!</p>
 </div>
 </div>
-<h3 style="margin-top:25px">Lokancha Abhipray 💬</h3>
-<div id="reviewList"></div>
+<h3 style="margin-top:36px;display:flex;align-items:center;gap:10px"><i class="fas fa-comments" style="color:#a855f7"></i> Public Reviews <span class="live-dot"></span></h3>
+<div id="reviewList" style="margin-top:18px"></div>
 </div>
 </section>
 
-<section class="section" id="contact" style="text-align:center">
+<section class="section" id="contact" style="text-align:center;background:linear-gradient(180deg, transparent, rgba(168,85,247,0.06))">
 <h2 class="title">Contact <span>Me</span></h2>
-<p>📞 <a href="tel:9322577727" style="color:#a855f7">9322577727</a> | 💬 <a href="https://wa.me/919322577727" style="color:#25D366">WhatsApp</a></p>
-<p style="color:#aaa;margin-top:8px">VJTI Mumbai - Electronics Department</p>
+<div style="max-width:600px;margin:30px auto;background:linear-gradient(145deg,#121222,#1a1033);padding:30px;border-radius:24px;border:1px solid rgba(168,85,247,0.25)">
+<p style="font-size:18px">📞 <a href="tel:93225777727" style="color:#a855f7;text-decoration:none;font-weight:700;font-size:20px">93225777727</a></p>
+<p style="margin-top:14px">📸 <a href="https://instagram.com/vedikaa__218" target="_blank" style="color:#ec4899;text-decoration:none;font-weight:600;font-size:18px"><i class="fab fa-instagram"></i> @vedikaa__218</a></p>
+<p style="margin-top:14px">💬 <a href="https://wa.me/9193225777727" target="_blank" style="color:#25D366;text-decoration:none;font-weight:600">Chat on WhatsApp</a></p>
+<div style="margin-top:20px;display:flex;gap:14px;justify-content:center">
+<a href="https://instagram.com/vedikaa__218" target="_blank" class="s-icon insta"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/9193225777727" target="_blank" class="s-icon wa"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:93225777727" class="s-icon call"><i class="fas fa-phone"></i></a>
+</div>
+<p style="color:#6b7280;margin-top:20px">VJTI Mumbai - Electronics Department | Mumbai, Maharashtra</p>
+<p style="margin-top:10px;font-size:12px;color:#4b5563"><span class="live-dot"></span>Live Portfolio - Updated Now</p>
+</div>
+<p style="margin-top:25px;color:#4b5563;font-size:13px">© 2026 Vedika Prashant Deore. Built with passion for Electronics. ✨</p>
 </section>
 
 <script>
 let sel=0;const stars=document.querySelectorAll('#starInput i');
-stars.forEach(s=>{s.addEventListener('click',()=>{sel=parseInt(s.dataset.v);updateStars()})});
-function updateStars(){stars.forEach((st,i)=>{st.className=i<sel?'fas fa-star active':'far fa-star'})}
-function getData(){return JSON.parse(localStorage.getItem('vedika_ratings')||'[]')}
-function saveData(d){localStorage.setItem('vedika_ratings',JSON.stringify(d))}
-function submitRating(){if(sel==0){alert('⭐ Star nivda!');return}const name=document.getElementById('rName').value||'Anonymous';const comment=document.getElementById('rComment').value||'Great work!';const data=getData();data.unshift({name,comment,rating:sel,date:new Date().toLocaleDateString()});saveData(data);document.getElementById('msg').style.display='block';document.getElementById('rName').value='';document.getElementById('rComment').value='';sel=0;updateStars();render();}
-function render(){const data=getData();const avg=data.length?(data.reduce((a,b)=>a+b.rating,0)/data.length).toFixed(1):'0.0';document.getElementById('avgNum').innerText=avg;document.getElementById('totalCount').innerText=data.length+' ratings';let sHtml='';for(let i=0;i<5;i++){sHtml+=i<Math.round(avg)?'<i class="fas fa-star" style="color:#facc15"></i>':'<i class="far fa-star" style="color:#333"></i>'}document.getElementById('avgStars').innerHTML=sHtml;document.getElementById('avgTop').innerHTML=sHtml+' '+avg;let list='';data.forEach(r=>{let st='';for(let i=0;i<5;i++)st+=i<r.rating?'⭐':'☆';list+=`<div class="review"><b>${r.name}</b> - ${st} <span style="color:#aaa;font-size:12px">${r.date}</span><p style="margin-top:6px;color:#ddd">${r.comment}</p></div>`});document.getElementById('reviewList').innerHTML=list||'<p style="color:#aaa">Ajun kuni rating kela nahi - pahila tumhi kara! 👇</p>';}
+stars.forEach(s=>{s.addEventListener('click',()=>{sel=parseInt(s.dataset.v);updateStars()});s.addEventListener('mouseover',()=>{let v=parseInt(s.dataset.v);stars.forEach((st,i)=>{st.style.color=i<v?'#facc15':'#333'})});});
+document.getElementById('starInput').addEventListener('mouseleave',updateStars);
+function updateStars(){stars.forEach((st,i)=>{st.className=i<sel?'fas fa-star active':'far fa-star';st.style.color=i<sel?'#facc15':'#333'})}
+function getData(){return JSON.parse(localStorage.getItem('vedika_ratings_live_final')||'[]')}
+function saveData(d){localStorage.setItem('vedika_ratings_live_final',JSON.stringify(d))}
+function submitRating(){if(sel==0){alert('Please select stars! ⭐');return}const name=document.getElementById('rName').value||'Anonymous';const comment=document.getElementById('rComment').value||'Amazing work!';const data=getData();data.unshift({name,comment,rating:sel,date:new Date().toLocaleDateString()});saveData(data);document.getElementById('msg').style.display='block';setTimeout(()=>document.getElementById('msg').style.display='none',3000);document.getElementById('rName').value='';document.getElementById('rComment').value='';sel=0;updateStars();render();}
+function render(){const data=getData();const avg=data.length?(data.reduce((a,b)=>a+b.rating,0)/data.length).toFixed(1):'0.0';document.getElementById('avgNum').innerText=avg;document.getElementById('totalCount').innerText=data.length+' ratings';let sHtml='';for(let i=0;i<5;i++){sHtml+=i<Math.round(avg)?'<i class="fas fa-star" style="color:#facc15"></i>':'<i class="far fa-star" style="color:#333"></i>'}document.getElementById('avgStars').innerHTML=sHtml;document.getElementById('avgTop').innerHTML=sHtml+' '+avg+' ('+data.length+')';let list='';data.forEach(r=>{let st='';for(let i=0;i<5;i++)st+=i<r.rating?'⭐':'☆';list+=`<div class="review"><div style="display:flex;justify-content:space-between"><b>${r.name}</b><span style="color:#6b7280;font-size:12px">${r.date}</span></div><div style="margin:6px 0">${st}</div><p style="color:#d1d5db;line-height:1.5">${r.comment}</p></div>`});document.getElementById('reviewList').innerHTML=list||'<p style="color:#6b7280;text-align:center;padding:24px;background:rgba(0,0,0,0.2);border-radius:14px"><span class="live-dot"></span> No ratings yet - Be the first to rate! 👇 Your feedback will appear here instantly and publicly.</p>';}
 render();
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'})})});
 </script>
 </body>
 </html>
