@@ -1,102 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vedika Prashant Deore | VJTI Electronics</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#0a0a14;color:#fff;scroll-behavior:smooth}
-nav{position:fixed;top:0;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,20,0.92);backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid #222}
-.hero{padding:120px 8% 50px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:35px;align-items:center}
-.badge{display:inline-block;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);padding:6px 14px;border-radius:20px;font-size:12px;color:#c084fc;margin-bottom:12px}
-.hero h1{font-size:45px;line-height:1.15}.hero h1 span{background:linear-gradient(90deg,#ff6ec7,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.btn{padding:11px 24px;border-radius:30px;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;text-decoration:none;display:inline-block;font-weight:600;margin:4px;font-size:14px;transition:0.3s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(168,85,247,0.4)}
-.profile{background:#151528;border-radius:24px;padding:24px;text-align:center;border:1px solid rgba(255,255,255,0.08);box-shadow:0 15px 40px rgba(0,0,0,0.3)}
-.profile img{width:160px;height:160px;border-radius:50%;border:4px solid #a855f7;object-fit:cover;object-position:top}
-section{padding:55px 8%}.title{text-align:center;font-size:28px;margin-bottom:30px}.title span{color:#a855f7}
+nav{position:fixed;top:0;width:100%;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,20,0.8);backdrop-filter:blur(10px);z-index:10}
+.logo{font-weight:700;font-size:22px}
+.logo span{color:#a855f7}
+.hero{padding:120px 5% 50px;display:grid;grid-template-columns:1.2fr 0.8fr;gap:30px;align-items:center}
+.badge{display:inline-block;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.3);padding:6px 14px;border-radius:20px;font-size:12px;color:#a855f7}
+.hero h1{font-size:42px;line-height:1.15;margin-top:15px}
+.hero h1 span{background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.btn{padding:11px 24px;border-radius:30px;background:linear-gradient(90deg,#a855f7,#ec4899);color:#fff;text-decoration:none;display:inline-block;font-weight:500;margin-top:18px;border:none;cursor:pointer}
+.profile{background:#121222;border-radius:24px;padding:22px;text-align:center;border:1px solid rgba(255,255,255,0.08)}
+.profile_img{width:150px;height:160px;border-radius:50%;border:4px solid #a855f7;object-fit:cover;object-position:top}
+.section{padding:50px 5%}
+.title{text-align:center;font-size:32px;margin-bottom:25px}
+.title span{color:#a855f7}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.box{background:#121225;padding:20px;border-radius:16px;border:1px solid #222;transition:0.3s}.box:hover{border-color:#a855f7;transform:translateY(-4px)}
-.cert-card{background:#121225;border-radius:16px;padding:18px;border:1px solid rgba(168,85,247,0.25)}
-.tag{display:inline-block;padding:4px 10px;border-radius:15px;font-size:10px;margin:3px}
-.project{background:linear-gradient(135deg,#12122a,#0f0f20);border:1px solid rgba(96,165,250,0.25);border-radius:20px;padding:26px;max-width:1000px;margin:auto}
-@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center}}
+.box{background:#121222;padding:20px;border-radius:16px;border:1px solid #222}
+.rating-section{background:linear-gradient(135deg,#121222,#1a1033);border:1px solid rgba(168,85,247,0.3);border-radius:20px;padding:25px;max-width:800px;margin:20px auto}
+.star-input{font-size:30px;cursor:pointer;color:#333}
+.star-input .active{color:#facc15}
+.input{width:100%;padding:12px;border-radius:10px;border:1px solid #333;background:#0a0a14;color:#fff;margin:8px 0}
+.review{background:#0a0a14;padding:15px;border-radius:12px;margin:10px 0;border-left:3px solid #a855f7}
+.avg{font-size:40px;font-weight:700;color:#facc15}
+.contact-btn{display:inline-block;padding:7px 14px;border-radius:20px;text-decoration:none;color:#fff;font-size:13px;margin:4px}
+.call{background:#25D366} .wa{background:#128C7E}
 </style>
 </head>
 <body>
-<nav><div style="font-weight:700">VEDIKA<span style="color:#a855f7">.DEV</span></div><div style="font-size:12px;color:#aaa">VJTI Mumbai - Electronics</div></nav>
+<nav><div class="logo">VEDIKA <span>DEV</span></div></nav>
 
-<div class="hero" id="home">
+<section class="hero">
 <div>
-<div class="badge">VJTI Mumbai - Electronics Dept | 10th 93.40% | 12th 86.60% PCMB</div>
-<h1>I'm <span>Vedika Prashant Deore</span><br>Electronics Engineer</h1>
-<p style="color:#9ca3af;margin:14px 0;font-size:14px;line-height:1.7">Student at Veermata Jijabai Technological Institute, Mumbai. Passionate about Embedded Systems, Python, Machine Learning & IoT. Building <b>Smart Parking System</b> for Electronics Workshop.</p>
-<a class="btn" href="#certs">My 3 Certificates</a>
-<a class="btn" style="background:transparent;border:1px solid #333" href="https://instagram.com/vedikaa__218" target="_blank"><i class="fa-brands fa-instagram"></i> vedikaa__218</a>
-<a class="btn" style="background:#16a34a" href="tel:9322257772"><i class="fa-solid fa-phone"></i> 9322257772</a>
+<div class="badge">✨ Excellence</div>
+<h1>Hi, I'm <span>Vedika Deore</span><br>Electronics Enthusiast</h1>
+<a href="#rate" class="btn">⭐ Rate My Work</a>
 </div>
 <div class="profile">
-<img src="profile.jpg" onerror="this.src='https://i.pravatar.cc/300?img=32'" alt="Vedika Deore">
-<h3 style="margin-top:14px">Vedika P. Deore</h3>
-<p style="color:#c084fc;font-size:12px;margin-top:4px">VJTI | Electronics | ML & Python Certified</p>
-<div style="margin-top:16px;text-align:left;font-size:12.5px;color:#aaa;line-height:2.2;background:#0f0f1e;padding:12px;border-radius:12px">
-<i class="fa-solid fa-graduation-cap" style="color:#a855f7"></i> VJTI Mumbai - Electronics<br>
-<i class="fa-solid fa-school" style="color:#22c55e"></i> 10th: 93.40% | 12th: 86.60% PCMB<br>
-<i class="fa-solid fa-certificate" style="color:#f59e0b"></i> 3x Certified (ML, Python)<br>
-<i class="fa-solid fa-microchip" style="color:#60a5fa"></i> Smart Parking IoT Project<br>
-<i class="fa-brands fa-instagram" style="color:#ec4899"></i> @vedikaa__218
-</div>
-</div>
-</div>
-
-<section id="project" style="background:#0e0e1e">
-<h2 class="title">Featured Project: <span>SMART PARKING SYSTEM</span></h2>
-<div class="project">
-<h3>🅿️ Smart Parking System Using Arduino UNO</h3>
-<p style="color:#9ca3af;font-size:13px;margin-top:8px">Electronics Workshop - VJTI | A parking lot that senses, decides and responds</p>
-<p style="color:#ccc;margin-top:12px;font-size:13px">An automated system monitors slot availability using sensors and updates every output in real time. <b>Result: Less congestion. Less fuel. Better flow.</b></p>
-<div style="margin-top:18px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;font-size:11px">
-<div class="box"><b style="color:#60a5fa">INPUT</b><br>4x IR Sensors</div>
-<div class="box"><b style="color:#a855f7">PROCESS</b><br>Arduino UNO</div>
-<div class="box"><b style="color:#22c55e">OUTPUTS</b><br>LEDs, LCD, Servo, Buzzer</div>
-</div>
-<p style="font-size:11px;color:#888;margin-top:14px;text-align:center">Occupied → Red LED | Free → Green LED | Full → Buzzer + Gate Closed | Future: IoT monitoring, Mobile alerts, RFID, Cloud analytics | Applications: Malls, Hospitals, Airports, Colleges</p>
+<img src="profile.jpg" alt="Vedika" class="profile_img">
+<h3 style="margin-top:12px">Vedika Deore</h3>
+<p style="color:#a855f7;font-size:13px">VJTI Mumbai - Electronics</p>
+<div id="avgTop" style="color:#facc15;margin-top:8px"></div>
+<p style="margin-top:12px">
+<a href="tel:9322577727" class="contact-btn call">📞 9322577727</a>
+<a href="https://wa.me/919322577727" target="_blank" class="contact-btn wa">💬 WhatsApp</a>
+</p>
 </div>
 </section>
 
-<section id="certs">
-<h2 class="title">My <span>Certificates</span> - 3 Certified Courses</h2>
-<div class="grid">
-<div class="cert-card"><h4 style="font-size:14px"><i class="fa-solid fa-robot" style="color:#22c55e"></i> ML Using Python - 94%</h4><p style="font-size:11px;color:#aaa;margin-top:4px">Simplilearn | 31 Oct 2026 | Code: 10974197 | Vedika Prashant Deore</p><span class="tag" style="background:#22c55e20;color:#22c55e;border:1px solid #22c55e40">Certified - ML</span><span class="tag" style="background:#3b82f620;color:#60a5fa">Python</span></div>
-<div class="cert-card"><h4 style="font-size:14px"><i class="fa-solid fa-brain" style="color:#60a5fa"></i> Fundamentals of ML - CS207</h4><p style="font-size:11px;color:#aaa;margin-top:4px">19 Hours | Score 94.00% | ID 8033570293VD | VEDIKA DEORE</p><span class="tag" style="background:#f59e0b20;color:#fbbf24">94% Score</span><span class="tag" style="background:#3b82f620;color:#60a5fa">19 Hours</span></div>
-<div class="cert-card" style="border-color:#f59e0b60"><h4 style="font-size:14px"><i class="fa-brands fa-python" style="color:#fbbf24"></i> Python for Beginners - Mastering Essentials</h4><p style="font-size:11px;color:#aaa;margin-top:4px">Scaler Topics | 27 Oct 2026 | 121 Videos, 16 Modules, 10 Challenges | Anshuman Singh</p><span class="tag" style="background:#f59e0b20;color:#fbbf24">Excellence</span></div>
-</div>
-</section>
-
-<section>
+<section class="section" id="education">
 <h2 class="title">Education & <span>Skills</span></h2>
 <div class="grid">
-<div class="box"><h4>📚 VJTI Mumbai - B.Tech Electronics</h4><p style="color:#aaa;font-size:12px;margin-top:6px">Veermata Jijabai Technological Institute - One of Maharashtra's top colleges</p></div>
-<div class="box"><h4>🎓 Academic Excellence</h4><p style="color:#aaa;font-size:12px;margin-top:6px">10th: 93.40% With Distinction | 12th: 86.60% PCMB Group (Physics, Chemistry, Maths, Biology)</p><div style="height:6px;background:#222;border-radius:10px;margin-top:10px"><div style="width:93%;height:100%;background:linear-gradient(90deg,#a855f7,#ec4899)"></div></div></div>
-<div class="box"><h4>💻 Skills</h4><p style="margin-top:8px"><span class="tag" style="background:#1f1f3a">Python</span><span class="tag" style="background:#1f1f3a">Machine Learning</span><span class="tag" style="background:#1f1f3a">Arduino UNO</span><span class="tag" style="background:#1f1f3a">IoT</span><span class="tag" style="background:#1f1f3a">Embedded C</span><span class="tag" style="background:#1f1f3a">HTML/CSS</span></p></div>
+<div class="box"><h3>📚 VJTI Mumbai - Electronics</h3><p style="color:#aaa;font-size:14px;margin-top:6px">Top College in Maharashtra - Veermata Jijabai Technological Institute</p></div>
+<div class="box"><h3>🎓 Academic Excellence</h3><p style="color:#aaa;font-size:14px;margin-top:6px">10th: 93.40% With Distinction | 12th: 86.60% PCMB Group</p></div>
+<div class="box"><h3>💻 Skills</h3><p style="color:#aaa;font-size:14px;margin-top:6px">Electronics | Hardworking | Teamwork | Communication</p><p style="margin-top:8px">📞 <a href="tel:9322577727" style="color:#a855f7">9322577727</a></p></div>
 </div>
 </section>
 
-<section id="contact" style="background:#0e0e1e">
-<h2 class="title">Let's <span>Connect</span></h2>
-<div style="max-width:650px;margin:auto;background:#121225;padding:28px;border-radius:20px;text-align:center;border:1px solid #222">
-<p style="color:#aaa;font-size:14px">Open for internships, projects & collaborations!</p>
-<div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-<a class="btn" href="https://instagram.com/vedikaa__218" target="_blank"><i class="fa-brands fa-instagram"></i> vedikaa__218</a>
-<a class="btn" style="background:#222" href="https://github.com/vedikadeore53-lab" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-<a class="btn" style="background:#16a34a" href="tel:9322257772"><i class="fa-solid fa-phone"></i> 9322257772</a>
+<section class="section" id="rate">
+<h2 class="title">Public <span>Rating</span> ⭐</h2>
+<div class="rating-section">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px">
+<div><div class="avg" id="avgNum">0.0</div><div id="avgStars"></div><div id="totalCount" style="color:#aaa">0 ratings</div></div>
+<div style="flex:1;min-width:280px">
+<p style="margin-bottom:10px">Tumcha Rating Dya:</p>
+<div id="starInput" class="star-input"><i class="far fa-star" data-v="1"></i><i class="far fa-star" data-v="2"></i><i class="far fa-star" data-v="3"></i><i class="far fa-star" data-v="4"></i><i class="far fa-star" data-v="5"></i></div>
+<input id="rName" class="input" placeholder="Tumcha Nav">
+<textarea id="rComment" class="input" placeholder="Abhipray liha..."></textarea>
+<button onclick="submitRating()" class="btn" style="width:100%">Submit Rating 🚀</button>
+<p id="msg" style="color:#4ade80;margin-top:8px;display:none">Dhanyawad! Tumchi rating public jhali! ✅</p>
 </div>
-<p style="color:#555;font-size:11px;margin-top:18px">📍 VJTI, Matunga, Mumbai, Maharashtra | Portfolio: vedikadeore53-lab.github.io<br>Note: Phone public aahe - spam yeu shakto</p>
+</div>
+<h3 style="margin-top:25px">Lokancha Abhipray 💬</h3>
+<div id="reviewList"></div>
 </div>
 </section>
 
-<footer style="text-align:center;padding:20px;color:#444;border-top:1px solid #1a1a2e;font-size:11px">© 2026 Vedika Prashant Deore | VJTI Electronics | 10th 93.40% | 12th 86.60% PCMB | 3x Certified | Smart Parking System<br>Made with ❤️ on GitHub Pages</footer>
+<script>
+let sel=0;
+const stars=document.querySelectorAll('#starInput i');
+stars.forEach(s=>{s.addEventListener('click',()=>{sel=parseInt(s.dataset.v);updateStars()})});
+function updateStars(){stars.forEach((st,i)=>{st.className=i<sel?'fas fa-star active':'far fa-star'})}
+function getData(){return JSON.parse(localStorage.getItem('vedika_ratings')||'[]')}
+function saveData(d){localStorage.setItem('vedika_ratings',JSON.stringify(d))}
+function submitRating(){
+ if(sel==0){alert('⭐ Star nivda!');return}
+ const name=document.getElementById('rName').value||'Anonymous';
+ const comment=document.getElementById('rComment').value||'Great work!';
+ const data=getData();
+ data.unshift({name,comment,rating:sel,date:new Date().toLocaleDateString()});
+ saveData(data);
+ document.getElementById('msg').style.display='block';
+ document.getElementById('rName').value='';document.getElementById('rComment').value='';sel=0;updateStars();
+ render();
+}
+function render(){
+ const data=getData();
+ const avg=data.length? (data.reduce((a,b)=>a+b.rating,0)/data.length).toFixed(1):'0.0';
+ document.getElementById('avgNum').innerText=avg;
+ document.getElementById('totalCount').innerText=data.length+' ratings';
+ let sHtml='';for(let i=0;i<5;i++){sHtml+= i<Math.round(avg)?'<i class="fas fa-star" style="color:#facc15"></i>':'<i class="far fa-star" style="color:#333"></i>'} 
+ document.getElementById('avgStars').innerHTML=sHtml;
+ document.getElementById('avgTop').innerHTML=sHtml+' '+avg;
+ let list='';data.forEach(r=>{
+   let st='';for(let i=0;i<5;i++) st+= i<r.rating?'⭐':'☆';
+   list+=`<div class="review"><b>${r.name}</b> - ${st} <span style="color:#aaa;font-size:12px">${r.date}</span><p style="margin-top:6px;color:#ddd">${r.comment}</p></div>`
+ });
+ document.getElementById('reviewList').innerHTML=list||'<p style="color:#aaa">Ajun kuni rating kela nahi - pahila tumhi kara! 👇</p>';
+}
+render();
+</script>
 </body>
 </html>
